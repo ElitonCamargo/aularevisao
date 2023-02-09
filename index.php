@@ -12,6 +12,7 @@
         <input type="submit" value="Enviar">
     </form>
     <?php
+    
         for($id = 0; $id <= $_POST['tab']; $id++){
             echo "<h1> $id * ".$_POST['tab']." = ".$_POST['tab'] * $id."</h1>";
         }
