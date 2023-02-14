@@ -8,6 +8,7 @@
 </head>
 <body>
     <a href="/">Home</a>
+    <a href="?page=tabuada">Tabuada</a>
     <a href="?page=1">Página 1</a>
     <a href="?page=2">Página 2</a>
     <a href="?page=3">Página 3</a>
@@ -31,8 +32,11 @@
                 case '3':
                     require_once './page/page3.php';
                     break;
+                case 'tabuada':
+                    require_once './page/tabuada.php';
+                    break;
                 default:
-                    echo 'página não encontrada';
+                    require_once './page/page404.php';
             }
         }
         else{
