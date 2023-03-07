@@ -5,39 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <a href="/">Home</a>
-    <a href="?page=tabuada">Tabuada</a>
-    <a href="?page=1">Página 1</a>
-    <a href="?page=2">Página 2</a>
-    <a href="?page=3">Página 3</a>
+    <style>             
+        .flex { 
+            display: flex; 
+            justify-content: space-between; 
+        } 
+        .flex-items { 
+            width: 30%; 
+            height:50px; 
+            margin: 10px; 
+            text-align: center; 
+        }
+        a{
+            margin-inline: 20px;
+        }
+    </style> 
+</head>   
+    <body>        
+        
+        <div class="flex"> 
+        <div class="flex-items">
+                <a href="#"> Aula 07/03/2023 </a>
+                <a href="/">Home</a>
+                <a href="?page=login">Login</a>
+            </div>  
+            <div class="flex-items">3</div> 
+        </div> 
+        <br> 
 
-    <?php
-        
-        if(isset($_GET['page'])){
-            $page = $_GET['page'];
-            switch($page){
-                case '1':
-                    require_once './page/page1.php';
-                    break;
-                case '2':
-                    require_once './page/page2.php';
-                    break;
-                case '3':
-                    require_once './page/page3.php';
-                    break;
-                case 'tabuada':
-                    require_once './page/tabuada.php';
-                    break;
-                default:
-                    require_once './page/page404.php';
+        <?php
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
+                switch($page){
+                    case '1':
+                        require_once './page/home.php';
+                        break;
+                    case '2':
+                        require_once './page/login.php';           
+                        break;
+                    default:
+                        require_once './page/page404.php';
+                }
             }
-        }
-        else{
-            require_once './page/page1.php';
-        }
-        
-    ?>
-</body>
-</html>
+            else{
+                require_once './page/home.php';
+            }
+        ?>
+      
+    </body> 
+</html>     
