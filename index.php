@@ -12,14 +12,9 @@
     <a href="?page=1">Página 1</a>
     <a href="?page=2">Página 2</a>
     <a href="?page=3">Página 3</a>
-    <!-- <form method="post">
-        <input type="number"    name="tab" placeholder="tab">
-        <input type="number"    name="inicio" placeholder="inicio">
-        <input type="number"    name="fim" placeholder="fim">
-        <input type="submit" value="Enviar">
-    </form> -->
+
     <?php
-        http://materialaulapw3.local/?page
+        
         if(isset($_GET['page'])){
             $page = $_GET['page'];
             switch($page){
@@ -40,13 +35,9 @@
             }
         }
         else{
-            echo 'Não foi';
+            require_once './page/page1.php';
         }
-        var_dump($_GET);
-
-        // for($id = 0; $id <= $_POST['tab']; $id++){
-        //     echo "<h1> $id * ".$_POST['tab']." = ".$_POST['tab'] * $id."</h1>";
-        // }
+        
     ?>
 </body>
 </html>
