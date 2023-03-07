@@ -37,10 +37,10 @@
             if(isset($_GET['page'])){
                 $page = $_GET['page'];
                 switch($page){
-                    case '1':
+                    case 'home':
                         require_once './page/home.php';
                         break;
-                    case '2':
+                    case 'login':
                         require_once './page/login.php';           
                         break;
                     default:
